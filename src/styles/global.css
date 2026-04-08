@@ -39,11 +39,12 @@ body {
 
 /* Navbar */
 .navbar {
-    background: #1e293b;
+    background: transparent;
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 0;
     margin-bottom: 20px;
 }
+
 
 /* Cards */
 .cards {

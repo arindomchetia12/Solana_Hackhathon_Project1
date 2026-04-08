@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./dashboard.css";
+import Footer from "../components/Footer";
 
 export default function Dashboard() {
     return (
@@ -11,10 +12,10 @@ export default function Dashboard() {
                     <span className="dot"></span> Intrust
                 </Link>
                 <div className="icons">
-                    <div className="icon active"></div>
-                    <div className="icon"></div>
-                    <div className="icon"></div>
-                    <div className="icon"></div>
+                    <div className="icon active" title="Dashboard">📊</div>
+                    <div className="icon" title="Wallet">💰</div>
+                    <div className="icon" title="Settings">⚙️</div>
+                    <div className="icon" title="Profile">👤</div>
                 </div>
             </div>
 
@@ -24,15 +25,15 @@ export default function Dashboard() {
 
                     {/* Wallet Balance */}
                     <div className="card">
-                        <h3>Your Wallet Balance</h3>
-                        <div className="wallet-item">0 SOL</div>
-                        <div className="wallet-item">0 mSOL</div>
-                        <div className="wallet-item">0 jitoSOL</div>
+                        <h3>💳 Your Wallet Balance</h3>
+                        <div className="wallet-item">◎ 0 SOL</div>
+                        <div className="wallet-item">🔷 0 mSOL</div>
+                        <div className="wallet-item">✨ 0 jitoSOL</div>
                     </div>
 
                     {/* Staking Rewards */}
                     <div className="card">
-                        <h3>Staking Rewards</h3>
+                        <h3>📈 Staking Rewards</h3>
                         <div className="row">
                             <span>APR</span>
                             <span>7.52%</span>
@@ -45,7 +46,7 @@ export default function Dashboard() {
 
                     {/* Refer Card */}
                     <div className="card gradient large">
-                        <h2>Refer a Friend</h2>
+                        <h2>🎁 Refer a Friend</h2>
                         <p>
                             Earn rewards when someone stakes using your referral link.
                         </p>
@@ -54,14 +55,14 @@ export default function Dashboard() {
 
                     {/* Restaking */}
                     <div className="card center">
-                        <h3>Solana Restaking</h3>
+                        <h3>🚀 Solana Restaking</h3>
                         <p>Coming Soon 🔥</p>
                         <button className="outline">View Rewards</button>
                     </div>
 
                     {/* Networks */}
                     <div className="card wide">
-                        <h3>Networks</h3>
+                        <h3>🌐 Networks</h3>
                         <div className="table">
                             <div className="table-row header">
                                 <span>Network</span>
@@ -69,12 +70,12 @@ export default function Dashboard() {
                                 <span>Boost</span>
                             </div>
                             <div className="table-row">
-                                <span>Mainnet Beta</span>
+                                <span>🔗 Mainnet Beta</span>
                                 <span>$4.2B</span>
                                 <span>4x</span>
                             </div>
                             <div className="table-row">
-                                <span>Devnet</span>
+                                <span>🧪 Devnet</span>
                                 <span>$0.0M</span>
                                 <span>1x</span>
                             </div>
@@ -83,15 +84,18 @@ export default function Dashboard() {
 
                     {/* Rewards */}
                     <div className="card">
-                        <h3>Current Season Rewards</h3>
+                        <h3>🏆 Current Season Rewards</h3>
                         <ul>
-                            <li>Partner Rewards ✔</li>
-                            <li>SOL Tokens ✔</li>
-                            <li>Governance Rewards</li>
+                            <li>🤝 Partner Rewards ✔</li>
+                            <li>💎 SOL Tokens ✔</li>
+                            <li>🗳️ Governance Rewards</li>
                         </ul>
                     </div>
 
                 </div>
+                
+                {/* Footer */}
+                <Footer />
             </div>
         </div>
     );

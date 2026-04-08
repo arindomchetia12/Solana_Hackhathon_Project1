@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.layout {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #020617;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar p {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+/* Charts */
+.charts {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.chart {
+    flex: 1;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+/* Table */
+.table {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+td,
+th {
+    padding: 10px;
+    text-align: left;
+}

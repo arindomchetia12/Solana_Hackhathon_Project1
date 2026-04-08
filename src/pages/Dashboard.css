@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f2a;
+    color: #fff;
+}
+
+.dashboard {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 70px;
+    height: 100vh;
+    background: #0a0d25;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background: #1a1f4a;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.icon.active {
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: #12163a;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.card.large {
+    grid-column: span 2;
+}
+
+.card.wide {
+    grid-column: span 2;
+}
+
+.card.center {
+    text-align: center;
+}
+
+.gradient {
+    background: linear-gradient(135deg, #6c5ce7, #2d2f7f);
+}
+
+/* Elements */
+.wallet-item {
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #6c5ce7;
+    color: white;
+    cursor: pointer;
+}
+
+button.outline {
+    background: transparent;
+    border: 1px solid #6c5ce7;
+}
+
+/* Table */
+.table {
+    margin-top: 10px;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.table-row.header {
+    font-weight: bold;
+    opacity: 0.7;
+}

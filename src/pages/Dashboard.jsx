@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./dashboard.css";
 
 export default function Dashboard() {
@@ -6,7 +7,9 @@ export default function Dashboard() {
         <div className="dashboard">
             {/* Sidebar */}
             <div className="sidebar">
-                <div className="logo">ETHFI</div>
+                <Link to="/" className="logo">
+                    <span className="dot"></span> Intrust
+                </Link>
                 <div className="icons">
                     <div className="icon active"></div>
                     <div className="icon"></div>
@@ -22,9 +25,9 @@ export default function Dashboard() {
                     {/* Wallet Balance */}
                     <div className="card">
                         <h3>Your Wallet Balance</h3>
-                        <div className="wallet-item">0 eETH</div>
-                        <div className="wallet-item">0 eETHK</div>
-                        <div className="wallet-item">0 eETHFI</div>
+                        <div className="wallet-item">0 SOL</div>
+                        <div className="wallet-item">0 mSOL</div>
+                        <div className="wallet-item">0 jitoSOL</div>
                     </div>
 
                     {/* Staking Rewards */}
@@ -32,7 +35,7 @@ export default function Dashboard() {
                         <h3>Staking Rewards</h3>
                         <div className="row">
                             <span>APR</span>
-                            <span>3.16%</span>
+                            <span>7.52%</span>
                         </div>
                         <div className="row">
                             <span>Points</span>
@@ -51,7 +54,7 @@ export default function Dashboard() {
 
                     {/* Restaking */}
                     <div className="card center">
-                        <h3>LRT Restaking Rewards</h3>
+                        <h3>Solana Restaking</h3>
                         <p>Coming Soon 🔥</p>
                         <button className="outline">View Rewards</button>
                     </div>
@@ -66,14 +69,14 @@ export default function Dashboard() {
                                 <span>Boost</span>
                             </div>
                             <div className="table-row">
-                                <span>Liquid ETH</span>
-                                <span>$342M</span>
+                                <span>Mainnet Beta</span>
+                                <span>$4.2B</span>
                                 <span>4x</span>
                             </div>
                             <div className="table-row">
-                                <span>Liquid USD</span>
-                                <span>$53.8M</span>
-                                <span>4x</span>
+                                <span>Devnet</span>
+                                <span>$0.0M</span>
+                                <span>1x</span>
                             </div>
                         </div>
                     </div>
@@ -83,8 +86,8 @@ export default function Dashboard() {
                         <h3>Current Season Rewards</h3>
                         <ul>
                             <li>Partner Rewards ✔</li>
-                            <li>LRT Tokens ✔</li>
-                            <li>ETHFI Rewards</li>
+                            <li>SOL Tokens ✔</li>
+                            <li>Governance Rewards</li>
                         </ul>
                     </div>
 

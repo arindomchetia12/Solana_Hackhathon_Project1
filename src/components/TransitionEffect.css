@@ -1,0 +1,46 @@
+.transition-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.shutter-grid {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.shutter-block {
+  flex: 1;
+  height: 100vh;
+  position: relative;
+  will-change: transform;
+  background: #030305;
+  border-right: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+
+
+.shutter-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 12px;
+  color: #fff;
+  z-index: 10005;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+/* Removed old leader-bar styles */

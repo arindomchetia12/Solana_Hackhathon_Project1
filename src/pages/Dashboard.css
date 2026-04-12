@@ -1,132 +1,479 @@
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #05050a;
-    color: #fff;
-}
-
-.dashboard {
-    display: flex;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 240px;
-    height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: #000;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: #000;
+}
+
+/* Sidebar Styling */
+.sidebar-new {
+    width: 280px;
+    background: #111;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    justify-content: space-between;
+    padding: 32px 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: 700;
+.solaire-logo {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+    padding-left: 8px;
+}
+
+.logo-box {
+    width: 32px;
+    height: 32px;
+    background: #8b5cf6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-box svg {
+    width: 20px;
+    height: 20px;
     color: #fff;
+}
+
+.logo-text h3 {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 10px;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.nav-group {
+    margin-bottom: 32px;
+}
+
+.nav-group label {
+    display: block;
+    font-size: 10px;
+    color: #555;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-left: 12px;
+    letter-spacing: 0.5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    color: #888;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 12px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+    position: relative;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(135deg, #60a5fa, #8b5cf6);
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.nav-icon {
+    width: 20px;
+    margin-right: 12px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: #10b981;
     border-radius: 50%;
-    display: inline-block;
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+    margin-left: auto;
 }
 
-.icon {
-    width: 40px;
-    height: 40px;
-    background: #1a1f4a;
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 10px;
+    padding: 2px 6px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin-left: auto;
 }
 
-.icon.active {
-    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+.sidebar-bottom {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Main */
-.main {
+.wallet-status {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: monospace;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+}
+
+/* Main Content Styling */
+.main-content {
     flex: 1;
-    padding: 20px;
+    background: #000;
+    padding: 40px;
+    overflow-y: auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-/* Cards */
-.card {
-    background: #12163a;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.card.large {
-    grid-column: span 2;
-}
-
-.card.wide {
-    grid-column: span 2;
-}
-
-.card.center {
-    text-align: center;
-}
-
-.gradient {
-    background: linear-gradient(135deg, #6c5ce7, #2d2f7f);
-}
-
-/* Elements */
-.wallet-item {
-    margin: 10px 0;
-    opacity: 0.8;
-}
-
-.row {
+.main-header {
     display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+    align-items: center;
+    margin-bottom: 48px;
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    border: none;
+.header-left h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    font-weight: 600;
+}
+
+.header-left p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.status-pill {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-pill.blue {
+    background: rgba(147, 197, 253, 0.1);
+    color: #93c5fd;
+    border: 1px solid rgba(147, 197, 253, 0.2);
+}
+
+.icon-btn {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notif-dot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background: #ef4444;
+    border-radius: 50%;
+    border: 2px solid #111;
+}
+
+/* Intent Agent Card */
+.intent-agent-section {
+    margin-bottom: 32px;
+}
+
+.intent-card {
+    background: #111;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.intent-card label {
+    font-size: 11px;
+    color: #8b5cf6;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.input-group input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 14px 20px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #8b5cf6;
+}
+
+.execute-btn {
+    background: #222;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 0 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.execute-btn:hover {
+    background: #2a2a2a;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #888;
+    padding: 6px 12px;
     border-radius: 8px;
-    background: #6c5ce7;
-    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: #111;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-card label {
+    font-size: 10px;
+    color: #555;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.stat-sub {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.stat-trend {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.stat-trend.positive { color: #10b981; }
+.stat-trend.negative { color: #f43f5e; }
+
+/* Bottom Grid */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 16px;
+}
+
+.activity-card, .schedule-card {
+    background: #111;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.card-header h3 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.text-btn {
+    background: transparent;
+    border: none;
+    color: #8b5cf6;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
 }
 
-button.outline {
-    background: transparent;
-    border: 1px solid #6c5ce7;
-}
-
-/* Table */
-.table {
-    margin-top: 10px;
-}
-
-.table-row {
+.activity-list, .schedule-list {
     display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.table-row.header {
+.activity-item, .schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
     font-weight: bold;
-    opacity: 0.7;
+}
+
+.activity-icon.purple { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
+.activity-icon.green { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.activity-icon.orange { background: rgba(249, 115, 22, 0.1); color: #f97316; }
+
+.activity-info {
+    flex: 1;
+}
+
+.activity-info h4 {
+    margin: 0 0 2px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.activity-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+.activity-amount {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.activity-amount.negative { color: #f43f5e; }
+.activity-amount.positive { color: #10b981; }
+.activity-amount.blocked { color: #555; }
+
+/* Schedule Styling */
+.schedule-item {
+    justify-content: space-between;
+}
+
+.schedule-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.schedule-meta h4 {
+    margin: 0 0 2px;
+    font-size: 14px;
+}
+
+.schedule-meta p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.dot.purple { background: #8b5cf6; }
+.dot.green { background: #10b981; }
+.dot.orange { background: #f97316; }
+
+.schedule-details {
+    text-align: right;
+}
+
+.schedule-details .amount {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.schedule-details .next {
+    font-size: 11px;
+    color: #555;
 }
